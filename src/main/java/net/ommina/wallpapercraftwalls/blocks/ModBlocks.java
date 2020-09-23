@@ -15,15 +15,15 @@ import java.util.Map;
 public class ModBlocks {
 
     public static final String[] COLOURS = { "blue", "brown", "cyan", "gray", "green", "purple", "red", "yellow" };
-    public static final String[] STAIRS = { "solid", "brick", "checkeredwool", "clay", "colouredbrick",
+    public static final String[] WALLS = { "solid", "brick", "checkeredwool", "clay", "colouredbrick",
          "damask", "diagonallydotted", "dotted", "fancytiles", "floral", "rippled", "stonebrick", "striped", "woodplank", "wool" };
 
     public static final Map<String, WallpaperWallBlock> WALLS_BLOCKS = new HashMap<String, WallpaperWallBlock>();
 
     @SubscribeEvent
-    public static void registerStairs( final RegistryEvent.Register<Block> event ) {
+    public static void registerWalls( final RegistryEvent.Register<Block> event ) {
 
-        for ( String pattern : STAIRS ) {
+        for ( String pattern : WALLS ) {
 
             for ( String colour : COLOURS ) {
 
