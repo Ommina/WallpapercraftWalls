@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:floralgray-7"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:floralgray-7",
+    "count": 6
+  }
+}

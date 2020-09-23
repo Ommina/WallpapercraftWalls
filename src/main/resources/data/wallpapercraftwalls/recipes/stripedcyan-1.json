@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:stripedcyan-1"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:stripedcyan-1",
+    "count": 6
+  }
+}

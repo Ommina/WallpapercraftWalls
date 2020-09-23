@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:rippledbrown-14"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:rippledbrown-14",
+    "count": 6
+  }
+}

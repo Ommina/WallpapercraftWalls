@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:dottedpurple-7"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:dottedpurple-7",
+    "count": 6
+  }
+}

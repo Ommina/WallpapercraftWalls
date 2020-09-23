@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:solidred-2"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:solidred-2",
+    "count": 6
+  }
+}

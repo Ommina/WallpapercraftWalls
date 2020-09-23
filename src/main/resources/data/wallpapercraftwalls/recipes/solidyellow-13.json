@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:solidyellow-13"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:solidyellow-13",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:fancytilespurple-14"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:fancytilespurple-14",
+    "count": 6
+  }
+}

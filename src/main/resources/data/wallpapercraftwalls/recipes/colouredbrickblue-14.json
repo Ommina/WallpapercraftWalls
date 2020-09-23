@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:colouredbrickblue-14"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:colouredbrickblue-14",
+    "count": 6
+  }
+}

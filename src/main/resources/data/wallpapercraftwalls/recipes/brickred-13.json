@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:brickred-13"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:brickred-13",
+    "count": 6
+  }
+}

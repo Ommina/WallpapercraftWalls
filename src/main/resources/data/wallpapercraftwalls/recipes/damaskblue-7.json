@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:damaskblue-7"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:damaskblue-7",
+    "count": 6
+  }
+}

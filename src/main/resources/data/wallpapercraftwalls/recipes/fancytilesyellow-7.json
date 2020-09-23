@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:fancytilesyellow-7"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:fancytilesyellow-7",
+    "count": 6
+  }
+}

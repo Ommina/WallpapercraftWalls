@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:checkeredwoolgray-14"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:checkeredwoolgray-14",
+    "count": 6
+  }
+}

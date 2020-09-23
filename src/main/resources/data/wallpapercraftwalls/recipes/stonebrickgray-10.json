@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:stonebrickgray-10"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:stonebrickgray-10",
+    "count": 6
+  }
+}

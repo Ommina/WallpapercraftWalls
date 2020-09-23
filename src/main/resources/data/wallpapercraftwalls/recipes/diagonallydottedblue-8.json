@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:diagonallydottedblue-8"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:diagonallydottedblue-8",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:damaskcyan-5"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:damaskcyan-5",
+    "count": 6
+  }
+}

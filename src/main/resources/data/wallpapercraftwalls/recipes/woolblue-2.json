@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:woolblue-2"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:woolblue-2",
+    "count": 6
+  }
+}

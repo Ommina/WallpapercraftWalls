@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:rippledgreen-10"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:rippledgreen-10",
+    "count": 6
+  }
+}

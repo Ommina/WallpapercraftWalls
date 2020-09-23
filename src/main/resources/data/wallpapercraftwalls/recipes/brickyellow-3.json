@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:brickyellow-3"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:brickyellow-3",
+    "count": 6
+  }
+}

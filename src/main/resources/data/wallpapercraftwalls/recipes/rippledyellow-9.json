@@ -1,0 +1,16 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:rippledyellow-9"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftwalls:rippledyellow-9",
+    "count": 6
+  }
+}
