@@ -1,6 +1,7 @@
 package net.ommina.wallpapercraftwalls.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,7 +36,7 @@ public class ModBlocks {
 
                     Block sourceBlock = ForgeRegistries.BLOCKS.getValue( Wallpapercraft.getId( name ) );
 
-                    if ( sourceBlock == null )
+                    if ( sourceBlock == null || sourceBlock == Blocks.AIR )
                         WallpapercraftWalls.LOGGER.warn( "Source block not found: " + name + " -- unable to create walls for it.  Panic!  This shouldn't happen!" );
                     else {
 

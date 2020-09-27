@@ -41,7 +41,7 @@ public class VariantScrollRequest {
             final ServerPlayerEntity player = ctx.get().getSender();
             final int delta = packet.delta;
 
-            if ( player.isSneaking() && player.getHeldItemMainhand() != ItemStack.EMPTY ) {
+            if ( player != null && player.isCrouching() && player.getHeldItemMainhand() != ItemStack.EMPTY ) {
 
                 ItemStack stack = player.getHeldItemMainhand();
 
