@@ -1,20 +1,90 @@
 ﻿{
-    "multipart": [
-        {   "when": { "up": "true" },
-            "apply": { "model": "wallpapercraftwalls:block/brickyellow-3_post" }
-        },
-        {   "when": { "north": "true" },
-            "apply": { "model": "wallpapercraftwalls:block/brickyellow-3_side", "uvlock": true }
-        },
-        {   "when": { "east": "true" },
-            "apply": { "model": "wallpapercraftwalls:block/brickyellow-3_side", "y": 90, "uvlock": true }
-        },
-        {   "when": { "south": "true" },
-            "apply": { "model": "wallpapercraftwalls:block/brickyellow-3_side", "y": 180, "uvlock": true }
-        },
-        {   "when": { "west": "true" },
-            "apply": { "model": "wallpapercraftwalls:block/brickyellow-3_side", "y": 270, "uvlock": true }
-        }
-    ]
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_post"
+      }
+    },
+    {
+      "when": {
+        "north": "low"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "low"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "low"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "low"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "tall"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side_tall",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "tall"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side_tall",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "tall"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side_tall",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "tall"
+      },
+      "apply": {
+        "model": "wallpapercraftwalls:block/brickyellow-3_side_tall",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
 }
-
