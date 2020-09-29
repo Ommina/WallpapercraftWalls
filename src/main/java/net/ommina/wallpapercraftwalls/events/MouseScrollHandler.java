@@ -9,6 +9,7 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.ommina.wallpapercraft.util.MathUtil;
+import net.ommina.wallpapercraftwalls.WallpapercraftWalls;
 import net.ommina.wallpapercraftwalls.blocks.ModBlocks;
 import net.ommina.wallpapercraftwalls.blocks.WallpaperWallBlock;
 import net.ommina.wallpapercraftwalls.items.WallItem;
@@ -24,7 +25,7 @@ public class MouseScrollHandler {
         final ClientPlayerEntity player = Minecraft.getInstance().player;
         final ItemStack held = player.getHeldItem( Hand.MAIN_HAND );
 
-        if ( !held.isEmpty() && held.getItem() instanceof WallItem && player.isCrouching() ) {
+        if ( !held.isEmpty() && held.getItem() instanceof WallItem && player.isCrouching() && held.getItem().getRegistryName().getNamespace().equals( WallpapercraftWalls.MODID ) ) {
 
             final int delta = MathUtil.clamp( (int) Math.round( event.getScrollDelta() ), -1, 1 );
 

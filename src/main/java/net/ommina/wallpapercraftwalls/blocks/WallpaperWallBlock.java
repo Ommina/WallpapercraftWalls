@@ -17,6 +17,8 @@ import javax.annotation.Nullable;
 
 public class WallpaperWallBlock extends WallBlock implements IDecorativeBlock {
 
+    private static final String POSTFIX = "";
+
     private final String pattern;
     private final String colour;
     private final String suffix;
@@ -32,7 +34,12 @@ public class WallpaperWallBlock extends WallBlock implements IDecorativeBlock {
 
     //region Overrides
     @Override
-    public String getName() {
+    public String getPostfix() {
+        return POSTFIX;
+    }
+
+    @Override
+    public String getNameForRegistry() {
         return this.pattern + this.colour + this.suffix;
     }
 
@@ -86,10 +93,10 @@ public class WallpaperWallBlock extends WallBlock implements IDecorativeBlock {
 
         BlockState newState = block.getStateContainer().getBaseState()
              .with( WallBlock.UP, state.get( WallBlock.UP ) )
-             .with( WallBlock.NORTH, state.get( WallBlock.NORTH ) )
-             .with( WallBlock.EAST, state.get( WallBlock.EAST ) )
-             .with( WallBlock.SOUTH, state.get( WallBlock.SOUTH ) )
-             .with( WallBlock.WEST, state.get( WallBlock.WEST ) )
+             .with( WallBlock.WALL_HEIGHT_NORTH, state.get( WallBlock.WALL_HEIGHT_NORTH ) )
+             .with( WallBlock.WALL_HEIGHT_EAST, state.get( WallBlock.WALL_HEIGHT_EAST ) )
+             .with( WallBlock.WALL_HEIGHT_SOUTH, state.get( WallBlock.WALL_HEIGHT_SOUTH ) )
+             .with( WallBlock.WALL_HEIGHT_WEST, state.get( WallBlock.WALL_HEIGHT_WEST ) )
              .with( WallBlock.WATERLOGGED, state.get( WallBlock.WATERLOGGED ) );
 
         if ( !world.isRemote )
