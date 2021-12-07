@@ -1,7 +1,7 @@
 package net.ommina.wallpapercraftwalls.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -40,7 +40,7 @@ public class ModBlocks {
                         WallpapercraftWalls.LOGGER.warn( "Source block not found: " + name + " -- unable to create walls for it.  Panic!  This shouldn't happen!" );
                     else {
 
-                        WallpaperWallBlock block = new WallpaperWallBlock( pattern, colour, suffix, Block.Properties.from( sourceBlock ) );
+                        WallpaperWallBlock block = new WallpaperWallBlock( pattern, colour, suffix, Block.Properties.copy( sourceBlock ) );
                         block.setRegistryName( WallpapercraftWalls.getId( name ) );
 
                         event.getRegistry().register( block );

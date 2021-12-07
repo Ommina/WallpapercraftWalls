@@ -1,7 +1,7 @@
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 
-package net.ommina.wallpapercraftwalls.network;
+package net.ommina.wallpapercraftwalls.datagen;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 

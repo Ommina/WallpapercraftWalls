@@ -1,6 +1,6 @@
 package net.ommina.wallpapercraftwalls.items;
 
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,7 +19,7 @@ public class ModItems {
     public static void registerItems( final RegistryEvent.Register<Item> event ) {
 
         ModBlocks.WALLS_BLOCKS.keySet().stream().sorted().forEachOrdered( s ->
-             event.getRegistry().register( new WallItem( ModBlocks.WALLS_BLOCKS.get( s ), new Item.Properties().group( WallpapercraftWalls.WALLS_TAB ) ).setRegistryName( s ) )
+             event.getRegistry().register( new WallItem( ModBlocks.WALLS_BLOCKS.get( s ), new Item.Properties().tab( WallpapercraftWalls.WALLS_TAB ) ).setRegistryName( s ) )
         );
 
     }

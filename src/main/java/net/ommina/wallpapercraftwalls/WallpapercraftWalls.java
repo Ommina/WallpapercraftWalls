@@ -1,7 +1,6 @@
 package net.ommina.wallpapercraftwalls;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -20,7 +19,7 @@ public class WallpapercraftWalls {
     public static final String MODID = "wallpapercraftwalls";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final ItemGroup WALLS_TAB = new CreativeTab();
+    public static final CreativeTab WALLS_TAB = new CreativeTab();
 
     public WallpapercraftWalls() {
 

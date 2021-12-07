@@ -1,9 +1,8 @@
 package net.ommina.wallpapercraftwalls.events;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,8 +21,8 @@ public class MouseScrollHandler {
     @SubscribeEvent
     public static void onScroll( InputEvent.MouseScrollEvent event ) {
 
-        final ClientPlayerEntity player = Minecraft.getInstance().player;
-        final ItemStack held = player.getHeldItem( Hand.MAIN_HAND );
+        final LocalPlayer player = Minecraft.getInstance().player;
+        final ItemStack held = player.getMainHandItem();
 
         if ( !held.isEmpty() && held.getItem() instanceof WallItem && player.isCrouching() && held.getItem().getRegistryName().getNamespace().equals( WallpapercraftWalls.MODID ) ) {
 

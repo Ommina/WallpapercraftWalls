@@ -1,11 +1,15 @@
 package net.ommina.wallpapercraftwalls.blocks;
 
-import net.minecraft.block.*;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.ommina.wallpapercraft.blocks.IDecorativeBlock;
 import net.ommina.wallpapercraft.blocks.InWorldHelper;
 import net.ommina.wallpapercraft.items.ModItems;
@@ -34,6 +38,11 @@ public class WallpaperWallBlock extends WallBlock implements IDecorativeBlock {
 
     //region Overrides
     @Override
+    public void attack( final BlockState state, final Level world, final BlockPos pos, final Player player ) {
+        onBlockClicked( state, world, pos, player );
+    }
+
+    @Override
     public String getPostfix() {
         return POSTFIX;
     }
@@ -59,50 +68,49 @@ public class WallpaperWallBlock extends WallBlock implements IDecorativeBlock {
     }
 
     @Override
-    public SoundType getSoundType( final BlockState state, final IWorldReader world, final BlockPos pos, @Nullable final Entity entity ) {
+    public SoundType getSoundType( final BlockState state, final LevelReader world, final BlockPos pos, @Nullable final Entity entity ) {
 
-        if ( !(entity instanceof PlayerEntity) )
+        if ( !(entity instanceof Player) )
             return SoundType.STONE;
 
-        final PlayerEntity player = (PlayerEntity) entity;
+        final Player player = (Player) entity;
 
-        if ( player.getHeldItemMainhand().isEmpty() )
+        if ( player.getMainHandItem().isEmpty() )
             return SoundType.STONE;
 
-        if ( player.getHeldItemMainhand().getItem() == ModItems.PAINTBRUSH || player.getHeldItemMainhand().getItem() instanceof PressColour || player.getHeldItemMainhand().getItem() instanceof PressVariant )
+        if ( player.getMainHandItem().getItem() == ModItems.PAINTBRUSH || player.getMainHandItem().getItem() instanceof PressColour || player.getMainHandItem().getItem() instanceof PressVariant )
             return ModSoundType.BLOCK_CHANGE;
 
         return SoundType.STONE;
 
     }
+//endregion Overrides
 
-    @Override
-    public void onBlockClicked( final BlockState state, final World world, final BlockPos pos, final PlayerEntity player ) {
+    public void onBlockClicked( final BlockState state, final Level level, final BlockPos pos, final Player player ) {
 
         Block block = Blocks.AIR;
 
-        if ( player.getHeldItemMainhand().getItem() == ModItems.PAINTBRUSH )
+        if ( player.getMainHandItem().getItem() == ModItems.PAINTBRUSH )
             block = InWorldHelper.getIncrementedBlockColour( this );
-        else if ( player.getHeldItemMainhand().getItem() instanceof PressColour )
-            block = InWorldHelper.getBlockFromColourPress( this, (PressColour) player.getHeldItemMainhand().getItem() );
-        else if ( player.getHeldItemMainhand().getItem() instanceof PressVariant )
-            block = InWorldHelper.getBlockFromVariantPress( this, (PressVariant) player.getHeldItemMainhand().getItem() );
+        else if ( player.getMainHandItem().getItem() instanceof PressColour )
+            block = InWorldHelper.getBlockFromColourPress( this, (PressColour) player.getMainHandItem().getItem() );
+        else if ( player.getMainHandItem().getItem() instanceof PressVariant )
+            block = InWorldHelper.getBlockFromVariantPress( this, (PressVariant) player.getMainHandItem().getItem() );
 
         if ( block == Blocks.AIR )
             return;
 
-        BlockState newState = block.getStateContainer().getBaseState()
-             .with( WallBlock.UP, state.get( WallBlock.UP ) )
-             .with( WallBlock.WALL_HEIGHT_NORTH, state.get( WallBlock.WALL_HEIGHT_NORTH ) )
-             .with( WallBlock.WALL_HEIGHT_EAST, state.get( WallBlock.WALL_HEIGHT_EAST ) )
-             .with( WallBlock.WALL_HEIGHT_SOUTH, state.get( WallBlock.WALL_HEIGHT_SOUTH ) )
-             .with( WallBlock.WALL_HEIGHT_WEST, state.get( WallBlock.WALL_HEIGHT_WEST ) )
-             .with( WallBlock.WATERLOGGED, state.get( WallBlock.WATERLOGGED ) );
+        BlockState newState = block.defaultBlockState()
+             .setValue( WallBlock.UP, state.getValue( WallBlock.UP ) )
+             .setValue( WallBlock.NORTH_WALL, state.getValue( WallBlock.NORTH_WALL ) )
+             .setValue( WallBlock.EAST_WALL, state.getValue( WallBlock.EAST_WALL ) )
+             .setValue( WallBlock.SOUTH_WALL, state.getValue( WallBlock.SOUTH_WALL ) )
+             .setValue( WallBlock.WEST_WALL, state.getValue( WallBlock.WEST_WALL ) )
+             .setValue( WallBlock.WATERLOGGED, state.getValue( WallBlock.WATERLOGGED ) );
 
-        if ( !world.isRemote )
-            world.setBlockState( pos, newState, 3 );
+        if ( !level.isClientSide )
+            level.setBlock( pos, newState, 3 );
 
     }
-//endregion Overrides
 
 }
