@@ -8,7 +8,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[37,)"
+loaderVersion="[39,)"
 
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL="https://github.com/Ommina/WallpapercraftWalls" #optional
@@ -22,7 +22,7 @@ license="MIT"
 modId="wallpapercraftwalls" #mandatory
 
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.5.1" #mandatory
+version="1.6.0" #mandatory
 
 # A display name for the mod
 displayName="Wallpapercraft - Walls!" #mandatory
@@ -51,7 +51,7 @@ Wallpapercraft - Walls!
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[37,)" #mandatory
+    versionRange="[39,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -60,13 +60,13 @@ Wallpapercraft - Walls!
 [[dependencies.wallpapercraftwalls]]
     modId = "minecraft" #mandatory
     mandatory = true #mandatory
-    versionRange = "[1.17.1,1.18)" #mandatory
+    versionRange = "[1.18.1,1.19)" #mandatory
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.wallpapercraftwalls]]
     modId="wallpapercraft"
     mandatory=true
-    versionRange="[1.5.1,1.6.0)"
+    versionRange="[1.6.0,1.7.0)"
     ordering="AFTER"
     side="BOTH"
